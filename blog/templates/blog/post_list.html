@@ -9,5 +9,12 @@
 		<h1>ブログ</h1>
 	</div>
 	<h1>ブログです。好きにしてってください。_(:3 」∠ )_</h1>
+	{% for post in posts %}
+		<div>
+			<p>著者:{{post.published_date }}</p>
+			<h2><a href="">{{ post.title }}</a></h2>
+			<p>{{ post.text|linebreaksbr }}</p>
+		</div>
+	{% endfor %}
 </body>
 </html>
